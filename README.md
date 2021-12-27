@@ -1,13 +1,17 @@
 # ShopsRUs
 
 ShopsRUs is a demo Restfull Application project for a retail market.
+
 Has calculation Discount and preparing Invoice abilities for the given BillId.
+
 By sending the any currency, you can get Invoice or Discount data in any currency.
-It's platform independent.(Windows, Linux, IOS)
+
+It's platform independent.(Windows, Linux, IOS).
 
 # Installation
 
-You need "dotnet" to publish any paltform
+You need "dotnet" to publish any paltform.
+
 Can publish to windows environment with:
 ```bash
 dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r win10-x64 --self-contained -o "\\your-hosting-environment"
