@@ -1,4 +1,4 @@
-# ShopsRUs
+# About ShopsRUs
 
 ShopsRUs is a demo Restfull Application project for a retail market.
 
@@ -8,13 +8,20 @@ By sending the any currency, you can get Invoice or Discount data in any currenc
 
 # Installation
 
-It's a cross-platform project.(Windows, Linux, IOS).
+It's a cross-platform project and can Run on Windows, Linux, MacOS.
 
-You need "dotnet" to publish any paltform.
+You need NET CORE SDK installed environment to publish to any platform above.
 
-Can publish to windows environment with:
+For example:
+
+To publish to windows hosting environment you can use the command belove:
 ```bash
-dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r win10-x64 --self-contained -o "\\your-hosting-environment"
+dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r win10-x64 -o "\\your-hosting-environment"
+```
+
+To publish Linux hosting environment you can use the command belove:
+```bash
+dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r linux-x64 --self-contained -o "\\your-hosting-environment"
 ```
 
 # Development
