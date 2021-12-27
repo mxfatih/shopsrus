@@ -11,6 +11,7 @@ namespace ShopsRUs.Data.Bill
     public class Bill : IBill
     {
         public int Id { get; set; }
+        public int UserId { get; set; }
         public List<Product> Products { get; set; }
 
         public List<Product> GetProducts() => Products;

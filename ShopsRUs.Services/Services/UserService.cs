@@ -10,11 +10,28 @@ namespace ShopsRUs.Services
     {
         public async Task<User> GetById(int userId)
         {
-            return new Employee
+            return userId switch
             {
-                Id = userId,
-                Name = "Adam",
-                SurName = "Employee"
+                1 => new Employee
+                {
+                    Id = userId,
+                    Name = "Adam",
+                    SurName = "Employee"
+                },
+                2 => new Customer
+                {
+                    Id = userId,
+                    Name = "Adam",
+                    SurName = "Customer",
+                    JoinDate = System.DateTime.Today.AddYears(-3)
+                },
+                3 => new Affiliate
+                {
+                    Id = userId,
+                    Name = "Adam",
+                    SurName = "Affiliate"
+                },
+                _ => null,
             };
         }
     }

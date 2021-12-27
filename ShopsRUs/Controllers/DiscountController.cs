@@ -30,15 +30,9 @@ namespace ShopsRUs.Controllers
 
         [HttpGet]
         [Route("GetBillDiscount")]
-        public async Task<Price> GetBillDiscount(int? userId, int? billId, Currency currency)
+        public async Task<Price> GetBillDiscount(int? billId, Currency currency)
         {
-            if (userId == null || billId == null)
-            {
-                return new Price { };
-            }
-
-            Data.User.User user = await _userService.GetById(userId.Value);
-            if (user == null)
+            if (billId == null)
             {
                 return new Price { };
             }
@@ -49,26 +43,20 @@ namespace ShopsRUs.Controllers
                 return new Price { };
             }
 
-            IList<IDiscount> discountsToApply = new List<IDiscount>
+            Data.User.User user = await _userService.GetById(bill.UserId);
+            if (user == null)
             {
-                new DiscountAmount(),
-                new DiscountUser()
-            };
+                return new Price { };
+            }
 
-            return _discountService.CalculateTotalDiscount(user, bill, discountsToApply, currency);
+            return _discountService.CalculateTotalDiscount(user, bill, currency);
         }
 
         [HttpGet]
         [Route("GetInvoice")]
-        public async Task<Invoice> GetInvoice(int? userId, int? billId, Currency currency)
+        public async Task<Invoice> GetInvoice(int? billId, Currency currency)
         {
-            if (userId == null || billId == null)
-            {
-                return null;
-            }
-
-            Data.User.User user = await _userService.GetById(userId.Value);
-            if (user == null)
+            if (billId == null)
             {
                 return null;
             }
@@ -79,13 +67,13 @@ namespace ShopsRUs.Controllers
                 return null;
             }
 
-            IList<IDiscount> discountsToApply = new List<IDiscount>
+            Data.User.User user = await _userService.GetById(bill.UserId);
+            if (user == null)
             {
-                new DiscountAmount(),
-                new DiscountUser()
-            };
+                return null;
+            }
 
-            return _invoiceService.GetInvoice(user, bill, discountsToApply, currency);
+            return _invoiceService.GetInvoice(user, bill, currency);
         }
     }
 }

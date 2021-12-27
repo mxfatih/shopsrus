@@ -1,6 +1,4 @@
 ﻿
-using System.Collections.Generic;
-
 using ShopsRUs.Data.Common;
 using ShopsRUs.Data.Interfaces;
 using ShopsRUs.Data.Invoice;
@@ -17,9 +15,9 @@ namespace ShopsRUs.Services
             _discountService = discountService;
         }
 
-        public Invoice GetInvoice<T>(T user, IBill bill, IList<IDiscount> discounts, Currency currency) where T : IUserDiscountable
+        public Invoice GetInvoice<T>(T user, IBill bill, Currency currency) where T : IUserDiscountable
         {
-            Price totalDiscount = _discountService.CalculateTotalDiscount(user, bill, discounts, currency);
+            Price totalDiscount = _discountService.CalculateTotalDiscount(user, bill, currency);
             Price totalAmount = bill.GetTotalPrice(currency);
 
             Invoice invoice = new Invoice
