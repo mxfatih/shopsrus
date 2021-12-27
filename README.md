@@ -14,7 +14,7 @@ You need NET CORE SDK installed environment to publish to any platform above.
 
 For example:
 
-To publish to windows hosting environment you can use the command belove:
+To publish to Windows hosting environment you can use the command belove:
 ```bash
 dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r win10-x64 -o "\\your-hosting-environment"
 ```
@@ -22,6 +22,11 @@ dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r win10-x64 -o "
 To publish Linux hosting environment you can use the command belove:
 ```bash
 dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r linux-x64 --self-contained -o "\\your-hosting-environment"
+```
+
+To publish MacOS hosting environment you can use the command belove:osx
+```bash
+dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r osx-x64 --self-contained -o "\\your-hosting-environment"
 ```
 
 # Development
