@@ -118,14 +118,17 @@ and the sample data is hard coded.
     Euro = 3
 }
 ```
+With a tool (Postman etc)
 
 You can get an Invoice for a bill:
 ```bash
 http://yourdomain/discount/GetInvoice?billid=3&currency=1 -GET
 ```
+![image](https://user-images.githubusercontent.com/9880732/147501415-31c730dd-e6bc-45f7-a1f1-ff1cf55de6f0.png)
 
 You can get Discount for a bill:
 ```bash
 http://yourdomain/discount/GetBillDiscount?billid=3&currency=1 -GET
 ```
+![image](https://user-images.githubusercontent.com/9880732/147501464-4ecfa0d9-6991-4ae7-b1c1-00a3f3fd4223.png)
 
