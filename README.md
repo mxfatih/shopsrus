@@ -132,3 +132,5 @@ http://yourdomain/discount/GetBillDiscount?billid=3&currency=1 -GET
 ```
 ![image](https://user-images.githubusercontent.com/9880732/147501464-4ecfa0d9-6991-4ae7-b1c1-00a3f3fd4223.png)
 
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
