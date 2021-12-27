@@ -34,8 +34,10 @@ dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r osx-x64 --self
 Its a .Net Core WebAPI project coded in SOLID Principles.
 
 # Language
-
 C#
+
+# IDE
+Visual Studio 2022 RC
 
 # Usage
 
@@ -45,8 +47,9 @@ Because this is a demo project, no Authorization or Authentication mechanism app
 and the sample data is hard coded.
 
 ## Sample Data
+
+###  Users
 ```bash
-  //  Users
   1 => Employee
   {
       Name = "Adam",
@@ -64,8 +67,8 @@ and the sample data is hard coded.
   }
 ```
 
+###  Bills
 ```bash
-  //  Bills
   Employee's bill:
       Id = 1,
       Products = new List<Product>
@@ -106,8 +109,8 @@ and the sample data is hard coded.
       }
 ```
 
+###  Currency
 ```bash
-Currency
 {
     TRY = 1,
     Dollar = 2,
