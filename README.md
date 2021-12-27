@@ -1,6 +1,7 @@
 # ShopsRUs
 
-ShopsRUs is a demo project for a retail market to calculate discount and prepare invoice for the given BillId.
+ShopsRUs is a demo project for a retail market to calculate Discount and prepare Invoice for the given BillId.
+By sending the any currency, you can get Invoice or Discount data in any currency.
 
 # Development
 
@@ -12,10 +13,11 @@ C#
 
 # Usage
 
-After installation application will listen at http://yourdomain/discount
+After installation, application will listen at http://yourdomain/discount
 
-Becouse of a demo project no Authorization or Authentication mechanism applied.
-The sample data is hard coded.
+Because this is a demo project, no Authorization or Authentication mechanism applied
+and the sample data is hard coded.
+
 ## Sample Data
 ```bash
   //  Users
@@ -78,6 +80,22 @@ The sample data is hard coded.
       }
 ```
 
+```bash
+Currency
+{
+    TRY = 1,
+    Dollar = 2,
+    Euro = 3
+}
+```
 
+You can get an Invoice for a bill:
+```bash
+http://yourdomain/discount/GetInvoice?billid=3&currency=1
+```
 
-You can get 
+You can get Discount for a bill:
+```bash
+http://yourdomain/discount/GetBillDiscount?billid=3&currency=1
+```
+
