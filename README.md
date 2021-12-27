@@ -6,9 +6,9 @@ Has calculation Discount and preparing Invoice abilities for the given BillId.
 
 By sending the any currency, you can get Invoice or Discount data in any currency.
 
-It's platform independent.(Windows, Linux, IOS).
-
 # Installation
+
+It's a cross-platform project.(Windows, Linux, IOS).
 
 You need "dotnet" to publish any paltform.
 
