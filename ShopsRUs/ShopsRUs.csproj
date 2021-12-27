@@ -2,7 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopsRUs.Services\ShopsRUs.Services.csproj" />
+  </ItemGroup>
 
 
 </Project>
