@@ -28,6 +28,7 @@ To publish MacOS hosting environment you can use the command belove:osx
 ```bash
 dotnet publish "\\your-environment\ShopsRUs.csproj" -c Release -r osx-x64 --self-contained -o "\\your-hosting-environment"
 ```
+#### Ref: https://docs.microsoft.com/en-us/dotnet/core/deploying
 
 # Development
 
